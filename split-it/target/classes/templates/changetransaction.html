@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>SplitIT!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Fertiges Css von https://getbootstrap.com/docs/4.4/getting-started/introduction/: -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+</head>
+
+<body style="background-color: WhiteSmoke;">
+	<div class="container">
+		<header>
+			<br />
+			<h1>
+				<span> <img src="images/Logo SplitIt.png" alt="HTML5 Icon"
+					style="width: 140px; height: 60px;"> - Ausgaben ganz einfach
+					aufteilen.
+				</span>
+			</h1>
+			<h6>Mit der Java-SpringBoot-Applikation "Split-It!" kannst du
+				Ausgaben ganz einfach zwischen dir und deinen Freunden aufteilen.</h6>
+			<br />
+		</header>
+		
+		
+		
+		
+		<h3 th:text=${transaction_updated} style="color: green"; ></h3>
+		<br> <br>
+
+
+
+		<div style="background-color: white; padding: 20px">
+			<h6>Diese Transaktion wurde wie folgt geändert:</h6>
+
+			<p th:text="'Neuer Vorname: '+${wrapper.temporaryName}"></p>
+			<p th:text="'Neue Beschreibung: '+${wrapper.temporaryDescription}"></p>
+			<p th:text="'Neuer Betrag in €: '+${wrapper.temporaryAmount}"></p>
+
+		</div>
+
+		<br>
+
+		<table class="table" style="background-color: White;">
+			<thead class="thead-dark">
+				<tr>
+					<th>Transaktions-ID</th>
+					<th>Vorname</th>
+					<th>Beschreibung</th>
+					<th>Betrag</th>
+				</tr>
+			</thead>
+
+			<tr>
+				<td><p th:text=${transaction0a}></p></td>
+				<td><p th:text=${transaction0b}></p></td>
+				<td><p th:text=${transaction0c}></p></td>
+				<td><p th:text=${transaction0d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction1a}></p></td>
+				<td><p th:text=${transaction1b}></p></td>
+				<td><p th:text=${transaction1c}></p></td>
+				<td><p th:text=${transaction1d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction2a}></p></td>
+				<td><p th:text=${transaction2b}></p></td>
+				<td><p th:text=${transaction2c}></p></td>
+				<td><p th:text=${transaction2d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction3a}></p></td>
+				<td><p th:text=${transaction3b}></p></td>
+				<td><p th:text=${transaction3c}></p></td>
+				<td><p th:text=${transaction3d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction4a}></p></td>
+				<td><p th:text=${transaction4b}></p></td>
+				<td><p th:text=${transaction4c}></p></td>
+				<td><p th:text=${transaction4d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction5a}></p></td>
+				<td><p th:text=${transaction5b}></p></td>
+				<td><p th:text=${transaction5c}></p></td>
+				<td><p th:text=${transaction5d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction6a}></p></td>
+				<td><p th:text=${transaction6b}></p></td>
+				<td><p th:text=${transaction6c}></p></td>
+				<td><p th:text=${transaction6d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction7a}></p></td>
+				<td><p th:text=${transaction7b}></p></td>
+				<td><p th:text=${transaction7c}></p></td>
+				<td><p th:text=${transaction7d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction8a}></p></td>
+				<td><p th:text=${transaction8b}></p></td>
+				<td><p th:text=${transaction8c}></p></td>
+				<td><p th:text=${transaction8d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction9a}></p></td>
+				<td><p th:text=${transaction9b}></p></td>
+				<td><p th:text=${transaction9c}></p></td>
+				<td><p th:text=${transaction9d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction10a}></p></td>
+				<td><p th:text=${transaction10b}></p></td>
+				<td><p th:text=${transaction10c}></p></td>
+				<td><p th:text=${transaction10d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction11a}></p></td>
+				<td><p th:text=${transaction11b}></p></td>
+				<td><p th:text=${transaction11c}></p></td>
+				<td><p th:text=${transaction11d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction12a}></p></td>
+				<td><p th:text=${transaction12b}></p></td>
+				<td><p th:text=${transaction12c}></p></td>
+				<td><p th:text=${transaction12d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction13a}></p></td>
+				<td><p th:text=${transaction13b}></p></td>
+				<td><p th:text=${transaction13c}></p></td>
+				<td><p th:text=${transaction13d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction14a}></p></td>
+				<td><p th:text=${transaction14b}></p></td>
+				<td><p th:text=${transaction14c}></p></td>
+				<td><p th:text=${transaction14d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction15a}></p></td>
+				<td><p th:text=${transaction15b}></p></td>
+				<td><p th:text=${transaction15c}></p></td>
+				<td><p th:text=${transaction15d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction16a}></p></td>
+				<td><p th:text=${transaction16b}></p></td>
+				<td><p th:text=${transaction16c}></p></td>
+				<td><p th:text=${transaction16d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction17a}></p></td>
+				<td><p th:text=${transaction17b}></p></td>
+				<td><p th:text=${transaction17c}></p></td>
+				<td><p th:text=${transaction17d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction18a}></p></td>
+				<td><p th:text=${transaction18b}></p></td>
+				<td><p th:text=${transaction18c}></p></td>
+				<td><p th:text=${transaction18d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction19a}></p></td>
+				<td><p th:text=${transaction19b}></p></td>
+				<td><p th:text=${transaction19c}></p></td>
+				<td><p th:text=${transaction19d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction20a}></p></td>
+				<td><p th:text=${transaction20b}></p></td>
+				<td><p th:text=${transaction20c}></p></td>
+				<td><p th:text=${transaction20d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction21a}></p></td>
+				<td><p th:text=${transaction21b}></p></td>
+				<td><p th:text=${transaction21c}></p></td>
+				<td><p th:text=${transaction21d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction22a}></p></td>
+				<td><p th:text=${transaction22b}></p></td>
+				<td><p th:text=${transaction22c}></p></td>
+				<td><p th:text=${transaction22d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction23a}></p></td>
+				<td><p th:text=${transaction23b}></p></td>
+				<td><p th:text=${transaction23c}></p></td>
+				<td><p th:text=${transaction23d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction24a}></p></td>
+				<td><p th:text=${transaction24b}></p></td>
+				<td><p th:text=${transaction24c}></p></td>
+				<td><p th:text=${transaction24d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction25a}></p></td>
+				<td><p th:text=${transaction25b}></p></td>
+				<td><p th:text=${transaction25c}></p></td>
+				<td><p th:text=${transaction25d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction26a}></p></td>
+				<td><p th:text=${transaction26b}></p></td>
+				<td><p th:text=${transaction26c}></p></td>
+				<td><p th:text=${transaction26d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction27a}></p></td>
+				<td><p th:text=${transaction27b}></p></td>
+				<td><p th:text=${transaction27c}></p></td>
+				<td><p th:text=${transaction27d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction28a}></p></td>
+				<td><p th:text=${transaction28b}></p></td>
+				<td><p th:text=${transaction28c}></p></td>
+				<td><p th:text=${transaction28d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction29a}></p></td>
+				<td><p th:text=${transaction29b}></p></td>
+				<td><p th:text=${transaction29c}></p></td>
+				<td><p th:text=${transaction29d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction30a}></p></td>
+				<td><p th:text=${transaction30b}></p></td>
+				<td><p th:text=${transaction30c}></p></td>
+				<td><p th:text=${transaction30d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction31a}></p></td>
+				<td><p th:text=${transaction31b}></p></td>
+				<td><p th:text=${transaction31c}></p></td>
+				<td><p th:text=${transaction31d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction32a}></p></td>
+				<td><p th:text=${transaction32b}></p></td>
+				<td><p th:text=${transaction32c}></p></td>
+				<td><p th:text=${transaction32d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction33a}></p></td>
+				<td><p th:text=${transaction33b}></p></td>
+				<td><p th:text=${transaction33c}></p></td>
+				<td><p th:text=${transaction33d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction34a}></p></td>
+				<td><p th:text=${transaction34b}></p></td>
+				<td><p th:text=${transaction34c}></p></td>
+				<td><p th:text=${transaction34d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction35a}></p></td>
+				<td><p th:text=${transaction35b}></p></td>
+				<td><p th:text=${transaction35c}></p></td>
+				<td><p th:text=${transaction35d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction36a}></p></td>
+				<td><p th:text=${transaction36b}></p></td>
+				<td><p th:text=${transaction36c}></p></td>
+				<td><p th:text=${transaction36d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction37a}></p></td>
+				<td><p th:text=${transaction37b}></p></td>
+				<td><p th:text=${transaction37c}></p></td>
+				<td><p th:text=${transaction37d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction38a}></p></td>
+				<td><p th:text=${transaction38b}></p></td>
+				<td><p th:text=${transaction38c}></p></td>
+				<td><p th:text=${transaction38d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction39a}></p></td>
+				<td><p th:text=${transaction39b}></p></td>
+				<td><p th:text=${transaction39c}></p></td>
+				<td><p th:text=${transaction39d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction40a}></p></td>
+				<td><p th:text=${transaction40b}></p></td>
+				<td><p th:text=${transaction40c}></p></td>
+				<td><p th:text=${transaction40d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction41a}></p></td>
+				<td><p th:text=${transaction41b}></p></td>
+				<td><p th:text=${transaction41c}></p></td>
+				<td><p th:text=${transaction41d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction42a}></p></td>
+				<td><p th:text=${transaction42b}></p></td>
+				<td><p th:text=${transaction42c}></p></td>
+				<td><p th:text=${transaction42d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction43a}></p></td>
+				<td><p th:text=${transaction43b}></p></td>
+				<td><p th:text=${transaction43c}></p></td>
+				<td><p th:text=${transaction43d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction44a}></p></td>
+				<td><p th:text=${transaction44b}></p></td>
+				<td><p th:text=${transaction44c}></p></td>
+				<td><p th:text=${transaction44d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction45a}></p></td>
+				<td><p th:text=${transaction45b}></p></td>
+				<td><p th:text=${transaction45c}></p></td>
+				<td><p th:text=${transaction45d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction46a}></p></td>
+				<td><p th:text=${transaction46b}></p></td>
+				<td><p th:text=${transaction46c}></p></td>
+				<td><p th:text=${transaction46d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction47a}></p></td>
+				<td><p th:text=${transaction47b}></p></td>
+				<td><p th:text=${transaction47c}></p></td>
+				<td><p th:text=${transaction47d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction48a}></p></td>
+				<td><p th:text=${transaction48b}></p></td>
+				<td><p th:text=${transaction48c}></p></td>
+				<td><p th:text=${transaction48d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction49a}></p></td>
+				<td><p th:text=${transaction49b}></p></td>
+				<td><p th:text=${transaction49c}></p></td>
+				<td><p th:text=${transaction49d}></p></td>
+			</tr>
+
+
+		</table>
+
+	</div>
+	<br>
+	<br>
+
+	<div id="wrapper">
+		<div id="content">
+			<h1></h1>
+			<br>
+		</div>
+		<!--Ende #content-->
+		<div id="footer" style="text-align: center">
+			<ul>
+				<li style="margin-left: 8%;"><a href="/"
+					title="Zurück zur Startseite">Startseite</a></li>
+				<li><a href="/costURL" title="Neue Ausgabe hinzufügen">Ausgabe
+						eintragen</a></li>
+				<li><a href="/transactions"
+					title="Vergangene Transaktionen ansehen">Transaktions-Historie</a></li>
+				<li><a href="/debtcalculation"
+					title="Aufgaben unter Freunden aufteilen">Zur Berechnung</a></li>
+				<li><a href="/clear"
+					title="Achtung: Alle Personen und Transaktionen werden gelöscht!">Alle
+						Daten löschen</a></li>
+
+				<li><a href="/faq"
+					title="Die meistgestellen Fragen im Überblick">FAQ</a></li>
+				<li><a href="/useful"
+					title="Weitere Möglichkeiten für die Webseite">Weitere
+						Entwicklung</a></li>
+				<li><a href="/contact" title="Hier kannst du uns kontaktieren">Kontakt</a></li>
+				<li><a href="/about" title="Impressum">Impressum</a></li>
+			</ul>
+
+		</div>
+		<!--Ende #footer-->
+	</div>
+	<!--Ende #wrapper-->
+
+
+</body>
+</html>

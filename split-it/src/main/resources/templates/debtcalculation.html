@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>SplitIT!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Fertiges Css von https://getbootstrap.com/docs/4.4/getting-started/introduction/: -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body style="background-color: WhiteSmoke;">
+	<div class="container">
+		<header>
+			<br />
+			<h1>
+				<span> <img src="images/Logo SplitIt.png" alt="HTML5 Icon"
+					style="width: 140px; height: 60px;"> - Ausgaben ganz einfach
+					aufteilen.
+				</span>
+			</h1>
+			<h6>Mit der Java-SpringBoot-Applikation "Split-It!" kannst du
+				Ausgaben ganz einfach zwischen dir und deinen Freunden aufteilen.</h6>
+			<br />
+		</header>
+
+		<h3 th:text=${data_cleared} style="color: red"; ></h3>
+		<h3 th:text=${new_project} href="/costURL"
+			style="color: LightSlateGray"; ></h3>
+		<h3 th:text=${info0} style="color: CornflowerBlue;"></h3>
+
+		<div class="jumbotron">
+			<h1 class="display-4" th:text="${total_cost} + ' €'"></h1>
+			<p class="lead">Gesamtkosten der Gruppe</p>
+			<hr class="my-4">
+
+			<p>
+				<span>Durchschnittskosten pro Person</span> <span
+					th:text="${average_cost} + ' €'"></span>
+
+			</p>
+		</div>
+
+		<p>
+			<strong>Zwischenergebnis:</strong>
+		</p>
+		<p th:text=${verrechnen}></p>
+
+
+
+		<!-- max 10 Spieler können Geld ausgegeben haben -->
+		<p th:text=${info1}></p>
+		<p th:text=${info2}></p>
+		<p th:text=${info3}></p>
+		<p th:text=${info4}></p>
+		<p th:text=${info5}></p>
+		<p th:text=${info6}></p>
+		<p th:text=${info7}></p>
+		<p th:text=${info8}></p>
+		<p th:text=${info9}></p>
+		<p th:text=${info10}></p>
+
+		<p>
+			<strong>Endergebnis:</strong>
+		</p>
+		<p th:text=${verrechnen2}></p>
+		<p th:text=${binfo1}></p>
+		<p th:text=${binfo2}></p>
+		<p th:text=${binfo3}></p>
+		<p th:text=${binfo4}></p>
+		<p th:text=${binfo5}></p>
+		<p th:text=${binfo6}></p>
+		<p th:text=${binfo7}></p>
+		<p th:text=${binfo8}></p>
+		<p th:text=${binfo9}></p>
+		<p th:text=${binfo10}></p>
+		<p th:text=${binfo11}></p>
+		<p th:text=${binfo12}></p>
+		<p th:text=${binfo13}></p>
+		<p th:text=${binfo14}></p>
+		<p th:text=${binfo15}></p>
+		<p th:text=${binfo16}></p>
+		<p th:text=${binfo17}></p>
+		<p th:text=${binfo18}></p>
+		<p th:text=${binfo19}></p>
+		<p th:text=${binfo20}></p>
+
+	</div>
+	<br>
+	<br>
+	<p>
+	<div id="wrapper">
+		<div id="content">
+			<h1></h1>
+			<br>
+		</div>
+		<!--Ende #content-->
+		<div id="footer" style="text-align: center">
+			<ul>
+				<li style="margin-left: 8%;"><a href="/"
+					title="Zurück zur Startseite">Startseite</a></li>
+				<li><a href="/costURL" title="Neue Ausgabe hinzufügen">Ausgabe
+						eintragen</a></li>
+				<li><a href="/transactions"
+					title="Vergangene Transaktionen ansehen">Transaktions-Historie</a></li>
+				<li><a href="/debtcalculation"
+					title="Aufgaben unter Freunden aufteilen">Zur Berechnung</a></li>
+				<li><a href="/clear"
+					title="Achtung: Alle Personen und Transaktionen werden gelöscht!">Alle
+						Daten löschen</a></li>
+
+				<li><a href="/faq"
+					title="Die meistgestellen Fragen im Überblick">FAQ</a></li>
+				<li><a href="/useful"
+					title="Weitere Möglichkeiten für die Webseite">Weitere
+						Entwicklung</a></li>
+				<li><a href="/contact" title="Hier kannst du uns kontaktieren">Kontakt</a></li>
+				<li><a href="/about" title="Impressum">Impressum</a></li>
+			</ul>
+
+		</div>
+		<!--Ende #footer-->
+	</div>
+	<!--Ende #wrapper-->
+
+
+</body>
+</html>

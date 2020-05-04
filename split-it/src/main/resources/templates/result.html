@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Ausgabe eingetragen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Fertiges Css von https://getbootstrap.com/docs/4.4/getting-started/introduction/: -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body style="background-color: WhiteSmoke;">
+	<div class="container">
+		<header>
+			<br />
+			<h1>
+				<span> <img src="images/Logo SplitIt.png" alt="HTML5 Icon"
+					style="width: 140px; height: 60px;"> - Ausgaben ganz einfach
+					aufteilen.
+				</span>
+			</h1>
+			<h6>Mit der Java-SpringBoot-Applikation "Split-It!" kannst du
+				Ausgaben ganz einfach zwischen dir und deinen Freunden aufteilen.</h6>
+			<br />
+		</header>
+
+		<h3 th:text=${successfully_saved} style="color:green;"/></h3>
+		<h3 th:text=${unsuccessfully_saved} style="color:red;"/></h3>
+			
+		<div style="background-color: white; padding: 20px">
+		
+			
+			
+			<p th:text="${transactionId}" />
+			<p th:text="'Vorname: '+${costClass.name}" />
+			<p th:text="'Betrag in Euro: ' + ${costClass.cost}" />
+			<p th:text="'Beschreibung: ' + ${costClass.beschreibung}" />
+		</div>
+		<br>
+			<button type="button" class="btn btn-secondary btn-lg btn-block">
+			<a href="/costURL" style="color: white;">Weitere Ausgabe erfassen</a>
+		</button>
+		<br>
+		<h3>Zahlungsübersicht:</h3>
+
+		<p th:text=${name0}></p>
+		<p th:text=${name1}></p>
+		<p th:text=${name2}></p>
+		<p th:text=${name3}></p>
+		<p th:text=${name4}></p>
+		<p th:text=${name5}></p>
+		<p th:text=${name6}></p>
+		<p th:text=${name7}></p>
+		<p th:text=${name8}></p>
+		<p th:text=${name9}></p>
+		<p th:text=${name10}></p>
+
+		<b><p th:text=${maxPeople}></p></b>
+
+	
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="wrapper">
+		<div id="content">
+			<h1></h1>
+			<br>
+		</div>
+		<!--Ende #content-->
+		<div id="footer" style="text-align: center">
+			<ul>
+				<li style="margin-left: 8%;"><a href="/" title="Zurück zur Startseite">Startseite</a></li>
+				<li><a href="/costURL" title="Neue Ausgabe hinzufügen">Ausgabe
+						eintragen</a></li>
+				<li><a href="/transactions"
+					title="Vergangene Transaktionen ansehen">Transaktions-Historie</a></li>
+				<li><a href="/debtcalculation"
+					title="Aufgaben unter Freunden aufteilen">Zur Berechnung</a></li>
+				<li><a href="/clear"
+					title="Achtung: Alle Personen und Transaktionen werden gelöscht!">Alle
+						Daten löschen</a></li>
+				
+				<li><a href="/faq"
+					title="Die meistgestellen Fragen im Überblick">FAQ</a></li>
+				<li><a href="/useful"
+					title="Weitere Möglichkeiten für die Webseite">Weitere Entwicklung</a></li>
+				<li><a href="/contact"
+					title="Hier kannst du uns kontaktieren">Kontakt</a></li>
+					<li><a href="/about" title="Impressum">Impressum</a></li>
+			</ul>
+
+		</div>
+		<!--Ende #footer-->
+	</div>
+	<!--Ende #wrapper-->
+	
+	
+</body>
+</html>

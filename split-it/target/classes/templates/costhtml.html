@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="https://www.thymeleaf.org" style="height:100%;">
+
+<head>
+<title>Ausgaben eintragen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Fertiges Css von https://getbootstrap.com/docs/4.4/getting-started/introduction/: -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body style="background-color: WhiteSmoke; height:100%;">
+	<div class="container">
+		<header>
+			<br />
+			<h1>
+				<span> <img src="images/Logo SplitIt.png" alt="HTML5 Icon"
+					style="width: 140px; height: 60px;"> - Ausgaben ganz einfach
+					aufteilen.
+				</span>
+			</h1>
+			<h6>Mit der Java-SpringBoot-Applikation "Split-It!" kannst du
+				Ausgaben ganz einfach zwischen dir und deinen Freunden aufteilen.</h6>
+			<br />
+		</header>
+		<h3 style="color: CornflowerBlue;">Geben Sie Ihre Ausgabe ein:</h3>
+		<br>
+
+		<!-- costAtrribute holt Objekt aus Methode costForm -->
+		<form action="#" th:action="@{/costURL}" th:object="${costObject}"
+			method="post"
+			style="background-color: rgb(150, 150, 150); padding: 20px; color: White;">
+
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Vorname:</label> <input
+					value="Vorname" type="text" maxlength="10" th:field="*{name}"
+					class="form-control" id="exampleFormControlInput1"
+					placeholder="Wer hat die Ausgabe getätigt?" required></input>
+			</div>
+			<div class="form-group">
+				<label for="exampleFormControlInput3">Beschreibung:</label> <input
+					type="text" maxlength="25" th:field="*{beschreibung}"
+					class="form-control" id="exampleFormControlInput3"
+					placeholder="Beschreibe die Ausgabe" required />
+			</div>
+			<div class="row">
+				<div class="col">
+					<label for="exampleFormControlInput2">Betrag in Euro:</label>
+					<div class="input-group mb-2">
+						<div class="input-group-prepend">
+							<span class="input-group-text">€</span>
+						</div>
+						<input type="number" step=0.01 th:field="*{cost}"
+							class="form-control" id="exampleFormControlInput2" required />
+					</div>
+				</div>
+				<div class="col">
+					<label for="exampleFormControlInput2">Bei beendeter
+						Eingabe:</label>
+					<button type="submit" class="form-control"
+						style="background-color: MediumSeaGreen; color: white;">Submit</button>
+				</div>
+				<div class="col">
+					<label for="exampleFormControlInput2">Eingabe abbrechen:</label>
+					<button type="reset" class="form-control"
+						style="background-color: IndianRed; color: white;">Reset</button>
+				</div>
+			</div>
+			<!-- Alternativ geht auch: 
+		<input type="submit" value="Submit" /> <input type="reset" value="Reset" />
+		-->
+
+		</form>
+
+
+
+		<br>
+		<button type="button" class="btn btn-secondary btn-lg btn-block">
+			<a href="/debtcalculation" style="color: white;">Zur Berechnnung</a>
+		</button>
+		<button type="button" class="btn btn-secondary btn-lg btn-block">
+			<a href="/transactions" style="color: white;">Zur
+				Transaktions-Historie</a>
+		</button>
+		<br>
+
+
+
+	</div>
+	
+	
+	<div id="wrapper">
+		<div id="content">
+			<h1></h1>
+			<br>
+		</div>
+		<!--Ende #content-->
+		<div id="footer" style="text-align: center">
+			<ul>
+				<li style="margin-left: 8%;"><a href="/" title="Zurück zur Startseite">Startseite</a></li>
+				<li><a href="/costURL" title="Neue Ausgabe hinzufügen">Ausgabe
+						eintragen</a></li>
+				<li><a href="/transactions"
+					title="Vergangene Transaktionen ansehen">Transaktions-Historie</a></li>
+				<li><a href="/debtcalculation"
+					title="Aufgaben unter Freunden aufteilen">Zur Berechnung</a></li>
+				<li><a href="/clear"
+					title="Achtung: Alle Personen und Transaktionen werden gelöscht!">Alle
+						Daten löschen</a></li>
+				
+				<li><a href="/faq"
+					title="Die meistgestellen Fragen im Überblick">FAQ</a></li>
+				<li><a href="/useful"
+					title="Weitere Möglichkeiten für die Webseite">Weitere Entwicklung</a></li>
+				<li><a href="/contact"
+					title="Hier kannst du uns kontaktieren">Kontakt</a></li>
+					<li><a href="/about" title="Impressum">Impressum</a></li>
+			</ul>
+
+		</div>
+		<!--Ende #footer-->
+	</div>
+	<!--Ende #wrapper-->
+	
+	
+</body>
+
+</html>

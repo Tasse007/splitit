@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>SplitIT!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Fertiges Css von https://getbootstrap.com/docs/4.4/getting-started/introduction/: -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+
+<!-- eigenes Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body style="background-color: WhiteSmoke;">
+	<div class="container">
+		<header>
+			<br />
+			<h1>
+				<span> <img src="images/Logo SplitIt.png" alt="HTML5 Icon"
+					style="width: 140px; height: 60px;"> - Ausgaben ganz einfach
+					aufteilen.
+				</span>
+			</h1>
+			<h6>Mit der Java-SpringBoot-Applikation "Split-It!" kannst du
+				Ausgaben ganz einfach zwischen dir und deinen Freunden aufteilen.</h6>
+			<br />
+		</header>
+
+		<!-- Class Jumbotron refers to the bootstrap.com link from above -->
+		<div class="jumbotron" style="margin-bottom: 10px;">
+			<h1 class="display-4" th:text="${total_cost} + ' €'"></h1>
+			<p class="lead">Gesamtkosten der Gruppe</p>
+			<hr class="my-4">
+
+			<p>
+				<span>Durchschnittskosten pro Person</span> 
+				<span th:text="${average_cost} + ' €'"></span>
+		</div>
+
+
+		<button type="button" class="btn btn-secondary btn-lg btn-block"
+			style="margin-bottom: 0px;">
+			<a href="/costURL" style="color: white;">Erste Ausgaben erfassen</a>
+		</button>
+
+
+		<!-- testName refers to the Model in the HomeController -->
+		<p th:text="${testName}"></p>
+
+
+
+		<table class="table"
+			style="background-color: LightBlue; margin-top: 0px;">
+			<thead class="thead-dark">
+				<tr>
+					<th colspan="4">Die letzten 3 Transaktionen:</th>
+				</tr>
+				<tr>
+					<th>Transaktions-ID</th>
+					<th>Vorname</th>
+					<th>Beschreibung</th>
+					<th>Betrag</th>
+				</tr>
+				</tr>
+			</thead>
+			<tr>
+				<td><p th:text=${transaction0a}></p></td>
+				<td><p th:text=${transaction0b}></p></td>
+				<td><p th:text=${transaction0c}></p></td>
+				<td><p th:text=${transaction0d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction1a}></p></td>
+				<td><p th:text=${transaction1b}></p></td>
+				<td><p th:text=${transaction1c}></p></td>
+				<td><p th:text=${transaction1d}></p></td>
+			</tr>
+			<tr>
+				<td><p th:text=${transaction2a}></p></td>
+				<td><p th:text=${transaction2b}></p></td>
+				<td><p th:text=${transaction2c}></p></td>
+				<td><p th:text=${transaction2d}></p></td>
+			</tr>
+			<!-- Beispiel für Iteration min 42 tutorial 
+		      <tr th:each="prod : ${prods}">
+		        <td th:text="${prod.name}">Onions</td>
+		        <td th:text="${prod.price}">2.41</td>
+		        <td th:text="${prod.inStock}? #{true} : #{false}">yes</td>
+		      </tr> -->
+		</table>
+
+		<iframe width="1110" height="620"
+			src="https://www.youtube-nocookie.com/embed/R2CBrFq9KAI"
+			frameborder="0"
+			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+
+	</div>
+
+	<br>
+	
+	<footer>
+	<ul>
+		<li style="margin-left: 8%;"><a href="/"
+			title="Zurück zur Startseite">Startseite</a></li>
+		<li><a href="/costURL" title="Neue Ausgabe hinzufügen">Ausgabe
+				eintragen</a></li>
+		<li><a href="/transactions"
+			title="Vergangene Transaktionen ansehen">Transaktions-Historie</a></li>
+		<li><a href="/debtcalculation"
+			title="Aufgaben unter Freunden aufteilen">Zur Berechnung</a></li>
+		<li><a href="/clear"
+			title="Achtung: Alle Personen und Transaktionen werden gelöscht!">Alle
+				Daten löschen</a></li>
+
+		<li><a href="/faq" title="Die meistgestellen Fragen im Überblick">FAQ</a></li>
+		<li><a href="/useful"
+			title="Weitere Möglichkeiten für die Webseite">Weitere
+				Entwicklung</a></li>
+		<li><a href="/contact" title="Hier kannst du uns kontaktieren">Kontakt</a></li>
+		<li><a href="/about" title="Impressum">Impressum</a></li>
+	</ul>
+	</footer>
+
+</body>
+
+</html>
